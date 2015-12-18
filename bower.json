@@ -1,0 +1,21 @@
+{
+  "name": "moduleloader",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Victor Queiroz <victorcqueirozg@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "injector": "injection#~1.0.1"
+  }
+}
