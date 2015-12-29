@@ -7,12 +7,12 @@ gulp.task('build', function() {
 	gulp.src(['src/*.js'])
 	.pipe(concat('moduleloader.js'))
 	.pipe(wrapper({
-		header: '(function($window) {',
+		header: '(function(global) {',
 		footer: '\
 							var pending = {}, cache = {};\
-							$window.moduleloader = new ModuleLoader(new injector.Injector(pending, cache));\
-							$window.moduleloader.ModuleLoader = ModuleLoader;\
-						}($window));'
+							global.moduleloader = new ModuleLoader(new injector.Injector(pending, cache));\
+							global.moduleloader.ModuleLoader = ModuleLoader;\
+						}(window));'
 	}))
 	.pipe(uglify())
 	.pipe(gulp.dest('build'));
