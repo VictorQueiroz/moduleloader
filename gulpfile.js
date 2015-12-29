@@ -11,6 +11,7 @@ gulp.task('build', function() {
 		footer: '\
 							var pending = {}, cache = {};\
 							global.moduleloader = new ModuleLoader(new injector.Injector(pending, cache));\
+              global.moduleloader.Module = Module;\
 							global.moduleloader.ModuleLoader = ModuleLoader;\
 						}(window));'
 	}))
